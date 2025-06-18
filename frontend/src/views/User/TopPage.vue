@@ -1,18 +1,23 @@
 <template>
-  <div class="user-top">
-    <h1>YATwitter - ユーザートップページ</h1>
-    <p>ようこそ！こちらは一般ユーザー用のタイムラインです。</p>
-
-    <!-- ここにツイート一覧を表示予定 -->
+  <div class="user-layout">
+    <SideNav />
+    <main class="main-content">
+      <h1>YATwitter トップページ</h1>
+      <p>一般ユーザー用のタイムラインです</p>
+    </main>
   </div>
 </template>
 
 <script setup>
-// 今後 Axios などで API からツイートを取得して表示
+import SideNav from '@/components/Layout/UserLayout/SideNav.vue';
 </script>
 
 <style scoped>
-.user-top {
-  padding: 2rem;
+.user-layout {
+  display: flex;
+}
+.main-content {
+  flex: 1;
+  padding: 1rem;
 }
 </style>

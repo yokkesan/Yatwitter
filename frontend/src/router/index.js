@@ -5,8 +5,8 @@ import AdminDashboard from '../views/Admin/Dashboard.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'user-top',
+    path: '/user/top',
+    name: 'top',
     component: UserTopPage
   },
   {
