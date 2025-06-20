@@ -1,12 +1,66 @@
 <template>
-  <nav class="side-nav">
-    <ul>
-      <li><a href="#">ホーム</a></li>
-      <li><a href="#">プロフィール</a></li>
-      <li><a href="#">設定</a></li>
-    </ul>
-  </nav>
+    <div class="sidebar" :class="{ '--open': isSidebarOpen }">
+        <button @click="toggleSidebar()" class="sidebar__tab tab" aria-label="メニューを出す" data-sidebar-tab>
+            <span class="tab__icon" :class="{ '--open': isSidebarOpen }"></span>
+        </button>
+
+        <nav class="side-nav">
+            <ul class="side-nav__list">
+                <li class="side-nav__item">
+                    <a href="#">
+                        <img src="@/components/icons/svg/ProfileIcon.svg" alt="プロフィール" class="icon" />
+                        <span class="label">プロフィール</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#">
+                        <!-- <img src="@/assets/icons/post.png" alt="投稿" class="icon" /> -->
+                        <span class="label">投稿</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#">
+                        <!-- <img src="@/assets/icons/chat.png" alt="チャット" class="icon" /> -->
+                        <span class="label">チャット</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#">
+                        <!-- <img src="@/assets/icons/community.png" alt="コミュニティ" class="icon" /> -->
+                        <span class="label">コミュニティ</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#">
+                        <!-- <img src="@/assets/icons/privacy.png" alt="設定とプライバシー" class="icon" /> -->
+                        <span class="label">設定とプライバシー</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#">
+                        <!-- <img src="@/assets/icons/settings.png" alt="設定" class="icon" /> -->
+                        <span class="label">設定</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            isSidebarOpen: false
+        }
+    },
+    methods: {
+        toggleSidebar() {
+            this.isSidebarOpen = !this.isSidebarOpen;
+        }
+    }
+}
+</script>
 
 <style lang="scss">
 @import '@/assets/User/main.scss';

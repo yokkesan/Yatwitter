@@ -1,23 +1,109 @@
-.side-nav {
-    width: 200px;
-    background-color: #f4f4f4;
-    padding: 1rem;
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: #2c3e50;
+    position: fixed;
+    overflow: hidden;
+    transition: width 0.3s ease;
 
-    ul {
-        list-style: none;
-        padding: 0;
+    &.--open {
+        width: 200px;
+    }
+}
 
-        li {
-            margin-bottom: 0.5rem;
+.sidebar__tab {
+    position: relative; // ← fixed/absolute をやめる
+    margin-top: auto; // ← 下に押し下げる（flex用）
+    color: white;
+    z-index: 1000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
 
-            a {
-                text-decoration: none;
-                color: #333;
+    .tab__icon {
+        width: 20px;
+        height: 2px;
+        background: white;
+        position: relative;
+        display: block;
 
-                &:hover {
-                    color: #007bff;
-                }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: white;
+            left: 0;
+            transition: transform 0.3s, top 0.3s;
+        }
+
+        &::before {
+            top: -6px;
+        }
+
+        &::after {
+            top: 6px;
+        }
+
+        &.--open {
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                top: 0;
             }
         }
     }
+}
+
+.side-nav {
+    padding: 1rem;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            opacity: 0;
+            white-space: nowrap;
+            transition: opacity 0.3s ease;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+            }
+
+            .label {
+                // ラベルはopacityだけ別に管理するならここに書かなくてもOK
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.sidebar.--open .side-nav__item a {
+    opacity: 1;
 }
