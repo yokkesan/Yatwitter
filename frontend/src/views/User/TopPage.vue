@@ -3,9 +3,13 @@
     <SideNav />
     <main class="main-content">
       <img src="@/components/Icons/svg/TopLogo.svg" alt="YATwitter_Logo" class="toplogo" />
-      <h1>YATwitter トップページ</h1>
-      <p>一般ユーザー用のタイムラインです</p>
+
+      <div class="search-tweet-bar">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Search Twitter" />
+      </div>
     </main>
+
   </div>
 </template>
 
@@ -13,12 +17,3 @@
 import SideNav from '@/components/Layout/UserLayout/SideNav.vue';
 </script>
 
-<style scoped>
-.user-layout {
-  display: flex;
-}
-.main-content {
-  flex: 1;
-  padding: 1rem;
-}
-</style>
