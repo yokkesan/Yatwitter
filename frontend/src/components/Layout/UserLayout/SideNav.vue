@@ -4,6 +4,10 @@
             <span class="tab__icon" :class="{ '--open': isSidebarOpen }"></span>
         </button>
 
+        <div class="sideTopLogo">
+            <img src="@/components/Icons/svg/TopLogo.svg" alt="YATwitter_Logo" class="sideTopLogo" />
+        </div>
+
         <nav class="side-nav">
             <ul class="side-nav__list">
                 <li class="side-nav__item">

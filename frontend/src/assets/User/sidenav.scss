@@ -6,8 +6,22 @@
     overflow: hidden;
     transition: width 0.3s ease;
 
+     // 初期状態：ロゴ非表示
+    .sideTopLogo {
+        display: none;
+    }
+
     &.--open {
         width: 240px;
+
+        // 開いたときにロゴ表示
+        .sideTopLogo {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin: 1rem auto;
+            transition: transform 0.3s ease;
+        }
     }
 }
 

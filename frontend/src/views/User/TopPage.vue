@@ -2,6 +2,7 @@
   <div class="user-layout">
     <SideNav />
     <main class="main-content">
+      <img src="@/components/Icons/svg/TopLogo.svg" alt="YATwitter_Logo" class="toplogo" />
       <h1>YATwitter トップページ</h1>
       <p>一般ユーザー用のタイムラインです</p>
     </main>
