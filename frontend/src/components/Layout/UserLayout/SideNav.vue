@@ -14,31 +14,31 @@
                 </li>
                 <li class="side-nav__item">
                     <a href="#">
-                        <!-- <img src="@/assets/icons/post.png" alt="投稿" class="icon" /> -->
+                        <img src="@/components/icons/svg/PostIcon.svg" alt="プロフィール" class="icon" />
                         <span class="label">投稿</span>
                     </a>
                 </li>
                 <li class="side-nav__item">
                     <a href="#">
-                        <!-- <img src="@/assets/icons/chat.png" alt="チャット" class="icon" /> -->
+                        <img src="@/components/icons/svg/ChatIcon.svg" alt="チャット" class="icon" />
                         <span class="label">チャット</span>
                     </a>
                 </li>
                 <li class="side-nav__item">
                     <a href="#">
-                        <!-- <img src="@/assets/icons/community.png" alt="コミュニティ" class="icon" /> -->
+                        <img src="@/components/icons/svg/ComyuIcon.svg" alt="コミュニティ" class="icon" />
                         <span class="label">コミュニティ</span>
                     </a>
                 </li>
                 <li class="side-nav__item">
                     <a href="#">
-                        <!-- <img src="@/assets/icons/privacy.png" alt="設定とプライバシー" class="icon" /> -->
+                        <img src="@/components/icons/svg/PribacyIcon.svg" alt="設定とプライバシー" class="icon" />
                         <span class="label">設定とプライバシー</span>
                     </a>
                 </li>
                 <li class="side-nav__item">
                     <a href="#">
-                        <!-- <img src="@/assets/icons/settings.png" alt="設定" class="icon" /> -->
+                        <img src="@/components/icons/svg/SettingIcon.svg" alt="設定" class="icon" />
                         <span class="label">設定</span>
                     </a>
                 </li>
