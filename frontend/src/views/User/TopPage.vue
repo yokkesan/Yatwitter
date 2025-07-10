@@ -9,19 +9,6 @@
         <input type="text" placeholder="Search Twitter" />
       </div>
     </main>
-
-    <h1>test</h1>
-    <h1>test</h1>
-    <h1>test</h1>
-    <h1>test</h1>
-    <h1>test</h1>
-    <h2>tet02</h2>
-    <h2>tet02</h2>
-    <h2>tet02</h2>
-    <h2>tet02</h2>
-    <h2>tet02</h2>
-
-
   </div>
 </template>
 
